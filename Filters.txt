@@ -1,0 +1,7 @@
+Sentiment:
+track=i feel, i am feeling, i’m feeling, i dont feel, I’m, Im, I am, makes me
+
+@CNNMoney, Chicago Fed, NYFedResearch, DallasFed, New York Times, Wall Street Journal, The Economist
+
+Financial:
+track=news fed, news war, news obama, Bernanke news, news goldman, news government&follow=16184358, 46804450, 374672240, 143477156, 807095, 3108351, 5988062
