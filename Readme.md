@@ -1,2 +1,12 @@
 # Financial Predictor
-Open source tool that allows predicts the Dow Jones closing values by analyzing public mood and breaking news
+Recent research studies have shown that Twitter’s mood correlates somehow to DJIA closing values. For me, everything started when, at my course of Social Media and Machine Learning, I had to analyze one of the Bollen et al. research papers about this topic. Twitter mood predicts the stock market.
+
+Bollen’s research claimed close to 90 percent accuracy in predicting the stock’s daily changes. When people seemed calm, the Dow went up. When they became anxious, it went down.
+
+This paper had a lot of media impact, and a lot of financial institutions started to pay attention to social media tools. I had to present the algorithm that made this possible, so if you want, you can take a look at my Prezi
+
+With a little of research I found a startup that recently received 30M dollars of investment. Dataminr ’s algorithms mine tweets that contain information that can affect the stock market. So, what comes to my mind is, why not mixing the two systems and see what happens? I am working on analyzing Twitter mood’s (based on Bollen paper I am focused on calm dimension) and at the same time mining Twitter data looking for relevant information for DJIA closing values. After that let’s see what is the correlation (Granger correlation) and how can an efficient system be built using machine learning techniques! So here is my research project proposal
+
+ 
+
+Anyone who wants to join is more than welcome, specially for the finance area. Right now I am talking with a CME contact and professors for mining important news that can affect the Dow, but definitely I need some help here! Also, thanks to Aron Culotta, I have a great twitter dataset to test the mining techniques.
