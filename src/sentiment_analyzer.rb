@@ -1,13 +1,30 @@
-class Scorer
+# This class take the sentiment dataset and generates an array with a sentiment score
+
+class SentimentAnalyzer
+
+	# Takes the all the log files from the dataset_sentiment folder and runs the score method for each file
+	# It collects the output into an array
+	# TODO: it receives the period time to analyze
+	def run
+		sentiment_score = []
+
+		Dir["../dataset/sentiment/*"].each do |file|
+			sentiment_score << score(file)
+		end
+
+		p sentiment_score
+	end
+
 	def score(relative_path)
 		# From POMS model. Tense mood dimension
 		poms = ['tense', 'shaky', 'on edge', 'panicky', 'relaxed', 'uneasy', 'restless', 'nervous', 'anxious']
 		wordNet = ['suspense', 'alarmed', 'fearful', 'afraid', 'presage', 'afraid', 'hysterical', 'intimidate']
 
-		text = File.open(File.expand_path( Dir["./*"][1], File.dirname(__FILE__)), "r:iso-8859-1:utf-8")
+		text = File.open(File.expand_path( relative_path, File.dirname(__FILE__)), "r:iso-8859-1:utf-8")
 		tweets = text.read().split('}')
 		score = 0
 
+		# Scoring each tweet
 		tweets.each do |tweet|
 			poms.each do |adj|
 				if(tweet.match(Regexp.new(adj, Regexp::EXTENDED | Regexp::IGNORECASE)))
@@ -21,7 +38,7 @@ class Scorer
 			end
 		end
 
-		p score
+		return score
 	end
 end
 
