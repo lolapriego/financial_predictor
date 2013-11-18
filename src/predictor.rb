@@ -116,9 +116,10 @@ class Predictor
 	  problem = Libsvm::Problem.new
 		parameter = Libsvm::SvmParameter.new
 
-		parameter.cache_size = 1 # in megabytes
-		parameter.eps = 0.001
-		parameter.c   = 10
+		parameter.cache_size = 5 # in megabytes
+		parameter.eps = 0.0001
+		parameter.c   = 2
+		parameter.kernel_type = 4 # This was chosen because of the accuracy of the ouputs. Tested with news.
 
 		# Train classifier using training set
 		problem.set_examples(training_set.map(&:first), training_set.map(&:last))
@@ -126,13 +127,15 @@ class Predictor
 
 	end
 
-
+	# Returns 1 if the tweet contains a relevant new, O if not
 	def predict (tweet)
 		tweet_formated = tweet.split.map{ |x| x.gsub(/\?|,|\.|\-/,'') }
 		features = @dictionary.map{|x| tweet_formated.include?(x) ? 1 : 0 }
 
 		pred = @model.predict(Libsvm::Node.features(features))
 		puts "Predicted #{pred==1 ? 'ALARM' : '...'}"
+
+		return pred
 	end
 
 
