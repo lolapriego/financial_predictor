@@ -19,5 +19,5 @@ First you need to install the following tools
 # Dataset format
 - For the sentiment classification
 	- You need to store your files at dataset/sentiment . 
-	- Each file will store tweets of a day prefiltered as the Filter.txt says. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this section.
+	- Each file will store tweets of a day prefiltered as the Filter.txt at the Twitter API folder. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this section.
 	- There is a helper to know how to separate a .log or a .txt file with a lot of tweets from a period bigger than a day at the dataset folder
