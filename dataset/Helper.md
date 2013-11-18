@@ -1,0 +1,1 @@
+Go to [this note](https://www.evernote.com/shard/s298/sh/0da632af-71f0-4529-827d-a4b8843c199c/de0d0d4a584d0eabdccd4f935e56b46f) to know how to split a .log file by date
