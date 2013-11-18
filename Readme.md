@@ -11,6 +11,13 @@ With a little of research I found a startup that recently received 30M dollars o
 
 Anyone who wants to join is more than welcome, specially for the finance area. Right now I am talking with a CME contact and professors for mining important news that can affect the Dow, but definitely I need some help here! Also, thanks to Aron Culotta, I have a great twitter dataset to test the mining techniques.
 
-# Gems and Dependencies
+# Install
+First you need to install the following tools
 - [Json tool](https://github.com/zpoley/json-command)
 - [Ruby language bindings for LIBSVM](https://github.com/febeling/rb-libsvm)
+
+# Dataset format
+- For the sentiment classification
+	- You need to store your files at dataset/sentiment . 
+	- Each file will store tweets of a day prefiltered as the Filter.txt says. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this section.
+	- There is a helper to know how to separate a .log or a .txt file with a lot of tweets from a period bigger than a day at the dataset folder
