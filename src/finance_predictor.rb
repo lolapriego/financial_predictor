@@ -2,19 +2,21 @@ require './data_miner.rb'
 require './sentiment_analyzer.rb' # TODO: this should be properly done
 require 'yahoo_stock'
 
-class FinancePredictor
-	def run
-		DataMiner.new.run
-		SentimentAnalyzer.new.run
+DataMiner.new.run
+SentimentAnalyzer.new.run
 
-		closing_values = []
-		history = YahooStock::History.new(:stock_symbol => "DJIA", :start_date => Date.today-20, :end_date => Date.today-2)
+start = ARGV[0]
+endd = ARGV[1]
 
-		history.results(:to_array).output.each do |day_values|
-			closing_values << day_values[4]
-		end
+start_date = Date.parse(start)
+end_date = Date.parse(endd)
 
-		p closing_values
-	end
+closing_values = []
+history = YahooStock::History.new(:stock_symbol => "DJIA", :start_date => start_date, :end_date => end_date)
 
+history.results(:to_array).output.each do |day_values|
+	closing_values << day_values[4]
 end
+
+p closing_values
+
