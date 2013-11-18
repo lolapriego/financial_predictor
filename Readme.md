@@ -10,3 +10,7 @@ With a little of research I found a startup that recently received 30M dollars o
  
 
 Anyone who wants to join is more than welcome, specially for the finance area. Right now I am talking with a CME contact and professors for mining important news that can affect the Dow, but definitely I need some help here! Also, thanks to Aron Culotta, I have a great twitter dataset to test the mining techniques.
+
+# Gems and Dependencies
+- [Json tool](https://github.com/zpoley/json-command)
+- [Ruby language bindings for LIBSVM](https://github.com/febeling/rb-libsvm)
