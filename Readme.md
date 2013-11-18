@@ -15,6 +15,7 @@ Anyone who wants to join is more than welcome, specially for the finance area. R
 First you need to install the following tools
 - [Json tool](https://github.com/zpoley/json-command)
 - [Ruby language bindings for LIBSVM](https://github.com/febeling/rb-libsvm)
+- [A ruby gem that retrieves stock quotes from Yahoo](https://github.com/nas/yahoo_stock)
 
 # Dataset format
 - For the sentiment classification

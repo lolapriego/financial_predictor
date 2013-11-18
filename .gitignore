@@ -1,2 +1,6 @@
 dataset/sentiment/*
 dataset/news/*
+
+*.log
+
+dataset/sentiment/sample.txt

@@ -119,7 +119,7 @@ class Predictor
 		parameter.cache_size = 5 # in megabytes
 		parameter.eps = 0.0001
 		parameter.c   = 2
-		parameter.kernel_type = 4 # This was chosen because of the accuracy of the ouputs. Tested with news.
+		parameter.kernel_type = 0 # This was chosen because of the accuracy of the ouputs. Tested with news.
 
 		# Train classifier using training set
 		problem.set_examples(training_set.map(&:first), training_set.map(&:last))
