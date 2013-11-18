@@ -26,7 +26,7 @@ First you need to install the following tools
 	- Each file will store tweets of a day prefiltered as the Filter.txt at the Twitter API folder says. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this repo.
 	- Each tweet should be formatted exactly as the example of this repo, for now. This way the script will be able to parse only the text of the tweet
 
-- ### There is a helper to know how to separate a .log or a .txt file with a lot of tweets from a period bigger than a day at the dataset folder
+- ##### There is a helper to know how to separate a .log or a .txt file with a lot of tweets from a period bigger than a day at the dataset folder
 
 # More info
 For more information, like how to collect the data check my blog:
