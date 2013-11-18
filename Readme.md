@@ -21,3 +21,8 @@ First you need to install the following tools
 	- You need to store your files at dataset/sentiment . 
 	- Each file will store tweets of a day prefiltered as the Filter.txt at the Twitter API folder. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this section.
 	- There is a helper to know how to separate a .log or a .txt file with a lot of tweets from a period bigger than a day at the dataset folder
+
+# More info
+For more information, like how to collect the data check my blog:
+- [How To Collect Tweets, Step By Step.](http://lolapriego.com/blog/how-to-collect-tweets-step-by-step/)
+- [General Info](http://lolapriego.com/blog/can-twitter-predict-the-stock-market/)
