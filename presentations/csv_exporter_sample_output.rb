@@ -1,4 +1,5 @@
 # File for export the first output to a csv file
+# Copy paste your script's output
 # For the presentation
 require 'csv'
 
