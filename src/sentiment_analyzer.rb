@@ -6,10 +6,11 @@ class SentimentAnalyzer
 	# It collects the output into an array
 	# TODO: it receives the period time to analyze
 	def run
-		sentiment_score = []
+		sentiment_score = Hash.new
 
 		Dir["../dataset/sentiment/*"].each do |file|
-			sentiment_score << score(file)
+			date = file.gsub(/[^0-9]/, '')
+			sentiment_score[date] = score(file)
 		end
 
 		p sentiment_score

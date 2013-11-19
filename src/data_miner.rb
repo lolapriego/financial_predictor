@@ -12,10 +12,11 @@ class DataMiner
 	# It collects the output into an array
 	# TODO: it receives the period time to analyze
 	def run
-		alarm_score = []
+		alarm_score = Hash.new
 
 		Dir["../dataset/news/*"].each do |file|
-			alarm_score << score(file)
+			date = file.gsub(/[^0-9]/, '')
+			alarm_score[date] = score(file)
 		end
 
 		p alarm_score

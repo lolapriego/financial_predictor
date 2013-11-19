@@ -133,7 +133,6 @@ class Predictor
 		features = @dictionary.map{|x| tweet_formated.include?(x) ? 1 : 0 }
 
 		pred = @model.predict(Libsvm::Node.features(features))
-		puts "Predicted #{pred==1 ? 'ALARM' : '...'}"
 
 		return pred
 	end

@@ -33,7 +33,7 @@ First you need to install the following tools
 Please do not forget to look at the Dataset section
 - Go to src folder and run the script finance_predictor.rb. You need to give it two arguments: start date and end date. 
 - It will show the sentiment score, the news alarms score and finally the Dow Jones Closing values for that period
-- DO NOT FORGET to previously sorted your files at the dataset folder. This should correspond with the period of the arguments.
+- DO NOT FORGET to previously sort your files at the dataset folder. This should correspond with the period of the arguments.
 - Example: $ ruby finance_predictor.rb "2013-11-02" "2013-11-10"
 
 # More info
