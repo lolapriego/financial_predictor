@@ -13,6 +13,8 @@ class SentimentAnalyzer
 			sentiment_score[date] = score(file)
 		end
 
+		p "This is the score to know how tense is the people \nfrom the sentimen classifier"
+
 		p sentiment_score
 	end
 
