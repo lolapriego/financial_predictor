@@ -32,6 +32,7 @@ class DataMiner
 		# We are going to deal with the format of the tweet. It is not possible to parse it with JSON
 		# TODO: solve the issue with JSON.
 		tweets = []
+		alarms = []
 
 		text_splitted.each do |tweet|
 			tweets << tweet.split('"')[7]
@@ -42,10 +43,14 @@ class DataMiner
 		# Scoring each tweet
 		tweets.each do |tweet|
 			if tweet != nil
-				predictor.predict(tweet) ==1 ? score += 1 : 0
+				if predictor.predict(tweet) ==1  
+					score += 1
+					alarms << tweet
+				end
 			end
 		end
 
+		p alarms
 		score
 	end
 
