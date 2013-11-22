@@ -18,6 +18,7 @@ First you need to install the following tools
 - [A ruby gem that retrieves stock quotes from Yahoo](https://github.com/nas/yahoo_stock)
 
 # Dataset format
+- You will need this part
 - For the sentiment classification
 	- You need to store your files at dataset/sentiment . 
 	- Each file will store tweets of a day prefiltered as the Filter.txt at the Twitter API folder says. The format should separate each tweet with JSON format (separated by '{}'). There is an example at this repo.
