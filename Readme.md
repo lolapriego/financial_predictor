@@ -1,15 +1,15 @@
 # Financial Predictor
-Recent research studies have shown that Twitter’s mood correlates somehow to DJIA closing values. For me, everything started when, at my course of Social Media and Machine Learning, I had to analyze one of the Bollen et al. research papers about this topic. Twitter mood predicts the stock market.
+Recent research studies have shown that Twitter’s mood correlates somehow to DJIA closing values. For more infomation look at Bollen's paper.
+Using machine learning algorithms related to SVM, I am trying to demonstrate that you need more than Twitter mood to predict stock market. The interesting part is the financial information that you can retrieve from Twitter. This system run the same algorithm over sentiment and financial data separately so  it can determine which one have more correlation with the stock market.
 
-Bollen’s research claimed close to 90 percent accuracy in predicting the stock’s daily changes. When people seemed calm, the Dow went up. When they became anxious, it went down.
+Bollen’s research claimed close to 90 percent accuracy (...) in predicting the stock’s daily changes. When people seemed calm, the Dow went up. When they became anxious, it went down. His paper had a lot of media impact, and a lot of financial institutions started to pay attention to social media tools. I am going to use a similar technique but focused only in calm dimension.
 
-This paper had a lot of media impact, and a lot of financial institutions started to pay attention to social media tools. I had to present the algorithm that made this possible, so if you want, you can take a look at my Prezi
+With a little of research I found a startup that recently received 30M dollars of investment. Dataminr ’s algorithms mine tweets that contain information that can affect the stock market. This is not the only one. You can also check http://www.thestocksonar.com or [this article](http://www.fastcoexist.com/1681873/twitter-can-predict-the-stock-market-if-youre-reading-the-right-tweets) or [SNTMNT startup](http://www.sntmnt.com/products/).
 
-With a little of research I found a startup that recently received 30M dollars of investment. Dataminr ’s algorithms mine tweets that contain information that can affect the stock market. So, what comes to my mind is, why not mixing the two systems and see what happens? I am working on analyzing Twitter mood’s (based on Bollen paper I am focused on calm dimension) and at the same time mining Twitter data looking for relevant information for DJIA closing values. After that let’s see what is the correlation (Granger correlation) and how can an efficient system be built using machine learning techniques! So here is my research project proposal
+- For information about how the system works check [this post](http://lolapriego.com/blog/can-twitter-predict-the-stock-market/)
+- If you want to collaborate you are more than welcome.
 
- 
-
-Anyone who wants to join is more than welcome, specially for the finance area. Right now I am talking with a CME contact and professors for mining important news that can affect the Dow, but definitely I need some help here! Also, thanks to Aron Culotta, I have a great twitter dataset to test the mining techniques.
+Thanks to Aron Culotta, he is this project's mentor.
 
 # Install
 First you need to install the following tools

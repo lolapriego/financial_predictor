@@ -4,7 +4,6 @@ class SentimentAnalyzer
 
 	# Takes the all the log files from the dataset_sentiment folder and runs the score method for each file
 	# It collects the output into an array
-	# TODO: it receives the period time to analyze
 	def run
 		sentiment_score = Hash.new
 
@@ -13,15 +12,19 @@ class SentimentAnalyzer
 			sentiment_score[date] = score(file)
 		end
 
-		p "This is the score to know how tense is the people \nfrom the sentimen classifier"
-
 		p sentiment_score
 	end
 
 	def score(relative_path)
-		# From POMS model. Tense mood dimension
-		poms = ['tense', 'shaky', 'on edge', 'panicky', 'relaxed', 'uneasy', 'restless', 'nervous', 'anxious']
-		wordNet = ['suspense', 'alarmed', 'fearful', 'afraid', 'presage', 'afraid', 'hysterical', 'intimidate']
+		poms = Hash.new(0)
+		poms['tense'] = 2
+		poms['shaky'] = 10
+		poms['on edge'] = 16
+		poms['panicky'] = 20
+		poms['uneasy'] = 26
+		poms['restless'] = 27
+		poms['nervous'] = 34
+		poms['anxious'] = 41
 
 		text = File.open(File.expand_path( relative_path, File.dirname(__FILE__)), "r:iso-8859-1:utf-8")
 		tweets = text.read().split('}')
@@ -29,14 +32,9 @@ class SentimentAnalyzer
 
 		# Scoring each tweet
 		tweets.each do |tweet|
-			poms.each do |adj|
+			poms.keys.each do |adj|
 				if(tweet.match(Regexp.new(adj, Regexp::EXTENDED | Regexp::IGNORECASE)))
-					score += 2
-				end
-			end
-			wordNet.each do |adj|
-				if(tweet.match(Regexp.new(adj, Regexp::EXTENDED | Regexp::IGNORECASE)))
-					score += 1
+					score += poms[adj]
 				end
 			end
 		end

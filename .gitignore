@@ -1,5 +1,6 @@
 dataset/sentiment/*
 dataset/news/*
+dataset/past_news_dataset/*
 
 *.log
 
