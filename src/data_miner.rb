@@ -15,7 +15,6 @@ class DataMiner
 
 		Dir["../dataset/news/financial*.txt"].each do |file|
 			date = file.gsub(/[^0-9]/, '')
-			p date
 			features_day_vector[date] = score(file)
 		end
 		features_day_vector

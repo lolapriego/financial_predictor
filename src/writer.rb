@@ -13,8 +13,8 @@ class Writer
 		end
 
 		closing_values.zip.sentiment_score.keys.each do |closing_value, key|
-			target.write(closing_value + " 1:" + sentiment_score[key])
-			target.write('\n')
+			target.puts closing_value + " 1:" + sentiment_score[key]
+			# target.write('\n')
 		end
 	end
 
@@ -25,19 +25,23 @@ class Writer
 
 		history = YahooStock::History.new(:stock_symbol => "DJIA", :start_date => start, :end_date => endd)
 		history.results(:to_array).output.each do |day_values|
-			closing_values[day_values[0]] = day_values[4]
+			closing_values[day_values[0]] = (day_values[4].to_f)/1000
 		end
 
 		i = 1
-		closing_values.zip.financial_score.keys.each do |key|
-			target.write(closing_values["2013-11-06"] + " ")
-			features = financial_score[key]
+		j = 0
+		closing_a = closing_values.keys
+		fin_a = financial_score.keys
+		while j < closing_a.size do
+			target.write("#{closing_values[closing_a[j]]} ")
+			features = financial_score[fin_a[j]]
 			features.keys.each do |feature|
 				target.write("#{i}:#{features[feature]} ")
 				i += 1
 			end
+			target.puts
 			i = 1
-			target.write('\n')
+			j += 1
 		end
 	end
 end
