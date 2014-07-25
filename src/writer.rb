@@ -16,7 +16,9 @@ class Writer
 		end
 
 		closing_values.keys.each do |date|
-			target.puts "#{closing_values[date]} :" + sentiment_score[date]
+			if sentiment_score[date] != nil
+				target.puts "#{closing_values[date]} :" + sentiment_score[date]
+			end
 		end
 	end
 
