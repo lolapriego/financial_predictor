@@ -1,22 +1,17 @@
 require './data_miner.rb'
 require './sentiment_analyzer.rb' # TODO: this should be properly done
-require 'yahoo_stock'
+require './writer.rb'
 
-SentimentAnalyzer.new.run
-DataMiner.new.run
+# Take the output as input of writer
+#sentiment_output = SentimentAnalyzer.new.run
+financial_ouput = DataMiner.new.run
 
 start = ARGV[0]
 endd = ARGV[1]
 
-start_date = Date.parse(start)
-end_date = Date.parse(endd)
+writer = Writer.new
+#writer.create_svr_input_sent(sentiment_output, @start_date, @end_date)
+writer.create_svr_input_fin(financial_ouput, Date.parse(start), Date.parse(endd))
 
-closing_values = Hash.new 
-history = YahooStock::History.new(:stock_symbol => "DJIA", :start_date => start_date, :end_date => end_date)
 
-history.results(:to_array).output.each do |day_values|
-	closing_values[day_values[0]] = day_values[4]
-end
-
-p closing_values
 

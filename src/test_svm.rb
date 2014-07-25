@@ -1,5 +1,5 @@
 ## Test (rude, not with proper tests!) the predictor that mines relevant news for the DJIA closing values
-
+## Deprecated
 require './Predictor'
 
 p = Predictor.new

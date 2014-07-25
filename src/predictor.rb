@@ -1,4 +1,5 @@
 ## Class for mining important news for the DJIA closing values
+## DEPRECATED
 
 require 'libsvm'
 

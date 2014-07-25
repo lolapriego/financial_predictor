@@ -12,7 +12,7 @@ class SentimentAnalyzer
 			sentiment_score[date] = score(file)
 		end
 
-		p sentiment_score
+		sentiment_score
 	end
 
 	def score(relative_path)
