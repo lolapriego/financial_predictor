@@ -10,7 +10,7 @@ start = ARGV[0]
 endd = ARGV[1]
 
 writer = Writer.new
-#writer.create_svr_input_sent(sentiment_output, @start_date, @end_date)
+#writer.create_svr_input_sent(sentiment_output, Date.parse(start), Date.parse(endd))
 writer.create_svr_input_fin(financial_ouput, Date.parse(start), Date.parse(endd))
 
 

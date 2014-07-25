@@ -13,7 +13,7 @@ class DataMiner
 	def run
 		features_day_vector = Hash.new
 
-		Dir["../dataset/news/financial*.txt"].each do |file|
+		Dir["../dataset/news/training/financial*.txt"].each do |file|
 			date = file.gsub(/[^0-9]/, '')
 			features_day_vector[date] = score(file)
 		end

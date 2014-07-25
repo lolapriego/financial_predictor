@@ -7,7 +7,7 @@ class SentimentAnalyzer
 	def run
 		sentiment_score = Hash.new
 
-		Dir["../dataset/sentiment/*"].each do |file|
+		Dir["../dataset/sentiment/training/*"].each do |file|
 			date = file.gsub(/[^0-9]/, '')
 			sentiment_score[date] = score(file)
 		end
